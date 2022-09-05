@@ -1,0 +1,319 @@
+/* Css reset */
+*{
+    margin: 0;
+    padding:0;
+}
+
+/* CSS variables */
+
+:root{
+    --navbar-height:55px;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#logo{
+    
+    /* to make the logo in the center of the img container */
+    display: flex;
+    align-items: center;
+    margin:0px 20px;
+    padding:0px 10px;
+}
+
+#navbar div img{
+    padding: 2px 2px;
+    height: 53px;
+    width: 53px;
+}
+
+#navbar ul{
+    display: flex;
+    /*vertically aligns the list items w. r. to container*/
+    align-items: center;
+}
+
+#navbar ul li{
+    list-style : none;
+    margin: 0px 20px;
+}
+
+/*the same thing as above*/
+/* #navbar .item{
+    border: 2px solid chartreuse;
+    list-style : none ;
+} */
+
+#navbar ul li a{
+
+    color: white;
+    margin: 5px 10px;
+    padding: 1px 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;  
+}
+
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    /* font-weight: bolder; */
+}
+
+/* Home Section */
+
+#Home{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:60px 0px;
+    height: 566px;
+    padding: 0px 120px;
+}
+
+#Home::before{
+    content: "";
+    position: absolute;
+    background:url('../img/background1.jpg') no-repeat center center/cover;
+    /* background: url("https://previews.123rf.com/images/puhhha/puhhha1805/puhhha180500284/100520904-healthy-food-fresh-organic-vegetables-on-white-wooden-background-high-resolution.jpg") no-repeat center center/cover; */
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.7;
+}
+
+#Home .h-primary{
+    /* border: 2px solid black; */
+    
+    /*for responsiveness*/
+    text-align: center;
+
+    font-size: 3.8rem;
+    margin: 3px 10px;
+    padding: 2px 2px;
+    padding-bottom: 35px;
+    text-shadow: 2px 2px white;
+    font-family: 'Gentium Book Plus', serif;
+    /* color: white; */
+    
+}
+
+#Home p{
+    /* border: 2px solid purple; */
+    text-align: center;
+    padding: 1px 1px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 0.4px 0.4px whitesmoke;
+    /* color: white; */
+}
+
+#Home .btn{
+
+    /* border: 3px solid yellow; */
+    /* background-color: rgb(234, 202, 186); */
+
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 2px;
+    padding: 2px 2px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+#Home .btn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* ***Services Section***** */
+
+#services-container::before{
+    content:"";
+    position: absolute;
+    height: 380px;
+    width: 100%;
+    
+    z-index: -4;
+}
+
+.h-secondary{
+    /* border: 2px solid black; */
+    /* background-color: rgb(72, 198, 129); */
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding-top: 5px;
+    /* color: white; */  
+}
+
+.services{
+    display: flex;
+    padding: 5px;
+}
+
+.box{
+    border: 2px solid red;
+    background-color: rgb(243, 234, 234);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    margin: 6px 15px;
+    border-radius: 23px;
+
+    /* overflow: hidden; */
+}
+
+.box img{
+    /* If we are not making the box flex then below two properties can be used to make the image center */
+    /* display: block;
+    margin: auto; */
+    
+    margin: 3px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.box p{
+    /* border: 2px solid salmon; */
+    border-radius: 23px;
+    text-align: center;
+}
+
+.h-tertiary{
+    font-size: 1.5rem;
+    text-shadow: 1.3px 1.3px white;
+}
+
+
+/*Clients section*/
+#client-section{
+    position: relative;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    /* background: url('../img/background2.jpg') no-repeat center center/cover; */
+    background:url("https://img.freepik.com/free-vector/realistic-blurred-floral-background_52683-63510.jpg?w=2000") no-repeat center center/cover;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+    box-shadow: 5px 5px 4px 8px rgb(253, 250, 250);
+}
+
+.clients{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.client-item{
+    margin: 5px 10px;
+    padding: 10px 20px;
+}
+
+.client-item img 
+{
+    height: 100px;
+    width: 100px;
+    box-shadow: 5px 5px 4px 10px rgb(252, 249, 252);
+}
+
+#apple img
+{
+    height: 100px;
+    width: 150px;
+}
+
+#skype img
+{
+    height: 100px;
+    width: 150px;
+}
+
+/* Contact us section */
+
+#contact-section{
+    position: relative;
+}
+
+
+#contact-section::before{
+    content:"";
+    background: url('../img/background3.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 245px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+#contact-box{
+    padding: 5px 5px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group textarea{
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+.form-group input{
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*footer section*/
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    margin: 0px;
+}
